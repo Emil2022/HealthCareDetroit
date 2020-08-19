@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>About Page</title>
+	<link rel="stylesheet" type="text/css" href="About.css">
+</head>
+
+<body>
+
+
+	<nav>
+		<h1><a href="index.html"> <strong><center>HCD: Health Care Detroit</center></strong></a></h1>
+		<div>
+    <ul>
+			<li><a href="About.html"><center>About</center></a>
+			</li>
+			<li><a href = "#"> Search</a>
+				<ul>
+					<li><a href="MentalHealth.html"><center>Mental Health</center></a></li>
+					<li><a href="OverallHealth.html"><center>Overall Health</center></a></li>
+					<li><a href="SexualHealth.html"><center>Reproductive Health </center></a></li>
+					<li><a href="FoodStability.html"><center>Food Stability </center></a></li>
+				</ul>
+			</li>
+			
+      <li><a href="LocateDrop.html">Locate a Drop-Site</a></li>
+			<li><a href="blog.html">Blog</a></li>
+      <li><a href="App.html">App Prototype</a></li>
+
+		</ul>
+    </div>
+	</nav>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawSTDChart);
+      google.charts.setOnLoadCallback(drawInfantMortalityChart);
+      google.charts.setOnLoadCallback(drawAgeChart);
+  
+  // STD Chart     
+      function drawSTDChart(){
+        //https://www.michigan.gov/documents/mdhhs/2017_std_report_final_633944_7.pdf
+        
+        var data = new google.visualization.arrayToDataTable([
+          ['Year', 'Chlamydia Cases', 'Gonorrhea Cases','Syphilis'],
+          ['2009', 1638, 491,14.4],
+          ['2010', 1460, 462,9.7],
+          ['2011', 1184, 322,12.7],
+          ['2012', 1072, 248,17.2],
+          ['2013', 1091, 241,27.7],
+          ['2014', 1112, 232,18.8],
+          ['2015', 1054, 239,14.6],
+          ['2016', 984, 211,14.7],
+          ['2017', 940, 175,16.0],
+          
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Incidence of Sexually Transmitted Diseases in Detroit'
+          },
+          backgroundColor: '#d9d9d9',
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('STD_chart'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+
+// Infant Mortality Chart
+      function drawInfantMortalityChart() {
+        var data = new google.visualization.arrayToDataTable([
+          ['Year', 'Michigan Number', 'Detroit City Number'],
+          ['1990', 1638, 491],
+          ['1992', 1460, 462],
+          ['1994', 1184, 322],
+          ['1996', 1072, 248],
+          ['1998', 1091, 241],
+          ['2000', 1112, 232],
+          ['2002', 1054, 239],
+          ['2004', 984, 211],
+          ['2006', 940, 175],
+          ['2008', 894, 175],
+          ['2010', 817, 146],
+          ['2012', 783, 151],
+          ['2014', 773, 130],
+          ['2016', 747, 125],
+          ['2018', 723, 158],
+          
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Infant Deaths in Michigan and Detroit 1990-2018',
+            'width':600, 
+            'height':500
+          },
+          backgroundColor: '#d9d9d9',
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('infantMortality_chart'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+
+    // Age Chart 
+    
+// NUMBERS FOR MICHEAL TO ADD 
+//https://www.census.gov/quickfacts/fact/table/detroitcitymichigan,MI/PST045219
+    function drawAgeChart() {
+      var data1 = google.visualization.arrayToDataTable([
+      ['Age', 'Percentage'],
+      ['<5', 2],
+      ['<18', 1],
+      ['>19 and <65', 6],
+      ['>65', 1],
+      
+    ]);
+
+      var options = {'title':'Age Distribution of Detroit Residents', 'width':550, 'height':400};
+
+      var chart = new google.visualization.PieChart(document.getElementById('new_piechart'));
+      chart.draw(data1, options);
+    }
+
+    </script>
+
+<br>
+<h1>Mission</h1>
+<br>
+
+<p>We want to create a platform in which the people of Detroit can easily find the locations of various healthcare locations near them. In addition we want to provide information on the various resources available to them, including: food banks, urgent cares, and <strong>Covid-19</strong> testing centers. This platform will hopefully pave the way for future initiatives.That are inspired from geocaching, which aims to provide free reproductive health products around Detroit. </p>
+
+<ul>
+  <li></li>
+</ul>
+
+<h1>Healthcare in Detroit</h1>
+<br>
+
+<h2>Incidence of Sexually Transmitted Diseases </h2>
+<br>
+  <center><div id="STD_chart" style="width: 900px; height: 500px "></div></center>
+<br>
+<p><a href = "https://www.michigan.gov/documents/mdhhs/2017_std_report_final_633944_7.pdf">Source</a></p>
+<br>
+<p><center><button  onclick="window.location.href='SexualHealth.html';">
+      See where to find STD testing centers
+    </button><center></p>
+  <br></br>
+<h2>Infant Mortality Rate</h2>
+<br>
+  <div id="infantMortality_chart" style="width: 900px; height: 500px "></div>
+  <br>
+  <p><a href = "https://www.mdch.state.mi.us/osr/InDxMain/Tab5.asp">Source</a></p>
+  
+<br></br>
+<h2>Geolocation and Geo Caching for Feminine Hygiene Products</h2>
+<br><br>
+<h3><strong>What is Geo Caching?</strong></h3>
+
+<p>Geo Caching is a outdoor activity that uses a Global Positioning System on your phone.Other navigation techniques that use hide and seek containers, other also called Geo caches or caches are done at a specific marked location around the world on your map.Thousands of people are doing Geo caching everyday. Some people consdider this a fun game to play, while others use this to get to know there surrondings. Geo caching can also tell you information and the history about a place or area that your at. An example of this would be a library or movie theatre that holds more history and information than what you may have known previously. This is a great activity for when you want to go outside and have something to do or you just want to explore and find treasure just like a treasure hunter. Its a fun activity that anyone can use no matter where you are you never know there might be a geo cache near you. </p>
+<br>
+<button onclick="window.location.href='LocateDrop.html';">
+      Find a drop-site near you   </button>
+  
+<br><br>
+
+<h1>Targeted Demographics</h1>
+<h3>Population of Detroit</h3>
+<!--<div id="new_piechart" style="width: 900px; height: 500px "></div>-->
+<p>The audience we mostly want to call out are the younger people of Detroit. The reason for this is because we know that many younger people grow up with mental health problems and issues inside there body that take longer to find a solution for and places to do it at. Our website will help you find the places with our always-updating map then use the tab you need on the top of the page. We cover the important problems for young people that deal with food or medical supplies. No one is limited to the website, anyone in Detroit can use especially if you're new or just visiting Detroit, the website can help you find the important spots for health and other things.</p>
+
+
+<br><br><br>
+
+</body>
+</html>
