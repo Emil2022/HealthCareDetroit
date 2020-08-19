@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blog Page</title>
+  	<link rel="stylesheet" type="text/css" href="blog.css">
+</head>
+<body>
+
+<nav>
+	<h1><a href="index.html"> <strong><center>HCD: Health Care Detroit</center></strong></a></h1>
+		<div>
+    <ul>
+			<li><a href="About.html"><center>About</center></a>
+			</li>
+			<li><a href = "#"> Search</a>
+				<ul>
+					<li><a href="MentalHealth.html"><center>Mental Health</center></a></li>
+					<li><a href="OverallHealth.html"><center>Overall Health</center></a></li>
+					<li><a href="SexualHealth.html"><center>Reproductive Health </center></a></li>
+					<li><a href="FoodStability.html"><center>Food Stability </center></a></li>
+				</ul>
+			</li>
+			
+      <li><a href="LocateDrop.html">Locate a Drop-Site</a></li>
+			<li><a href="blog.html">Blog</a></li>
+      <li><a href="App.html">App Prototype</a></li>
+
+		</ul>
+    </div>
+	</nav>
+
+
+
+
+<br>
+
+<h3><center>Frequently Asked Questions</center></h3>
+<br>
+
+<p class="accordion"><strong><em>Is abdominal pain during my period normal?</em></strong> </p>
+<div class="panel">Yes, during menstration your uterus contracts to help expel its lining causing the sensation of pain. </div>
+
+<p class="accordion"><strong><em>Is it normal for my period to be irregular?</em></strong> </p>
+<div class="panel">Yes, there are many reasons for irregular periods, it could be a change in weight, change in hormone levels, change in diet, etc. </div>
+
+<p class="accordion"><strong><em>What is emergency contraception and how can I get it?</em></strong> </p>
+<div class="panel">Emergency Contraception (also called the Morning After Pill/Plan B) is a backup birth control method that can be used after unprotected intercourse or when other methods of contraception fail. It is most effective if taken immediately after unprotected intercourse has occurred. If taken within 72 hours of unprotected intercourse, studies show that pregnancy can be reduced by 89%, and while the percentage decreases over time, Emergency Contraception can be effective up to 120 hours after unprotected intercourse. </div>
+
+<p class="accordion"><strong><em>I think I have been exposed to a sexually transmitted infection (STI). Should I visit a STD health center for testing?</em></strong> </p>
+<div class="panel">Yes. All visits are strictly confidential. Your medical records cannot be released without your consent except in the event of a life-threatening emergency, under subpoena or for reporting certain contagious diseases. Keep in mind, you may need to submit a urine specimen and possibly bloodwork.  Drink plenty of water before the appointment, and do not urinate for 1 hour prior to the appointment. </div>
+
+<p class="accordion"><strong><em>What type of condom gives you the most protection?</em></strong> </p>
+<div class="panel">The kind you will use correctly, each and every time! No brand or type promoted here, just individual preference, so try different ones till you find the kind you prefer. All condoms sold in the U.S. pass the same quality measures. </div>
+
+<p class="accordion"><strong><em>Where do you go to get the birth control pill, to the store or the doctor? </em></strong> </p>
+<div class="panel">The pill must be prescribed by a medical provider such as a nurse practitioner, a doctor or a family planning clinic, such as Planned Parenthood. </div>
+
+<p class="accordion"><strong><em>What is a normal menstrual period?</em></strong> </p>
+<div class="panel">An average cycle is about 25-35 days, and last from two to seven days. </div>
+
+<style>
+/* Style the element that is used to open and close the accordion class */
+p.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 97%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom:10px;
+}
+
+/* Add a background color to the accordion if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+p.accordion.active, p.accordion:hover {
+    background-color: #ddd;
+}
+
+/* Unicode character for "plus" sign (+) */
+p.accordion:after {
+    content: '\2795'; 
+    font-size: 13px;
+    color: #777;
+    float: right;
+    margin-left: 5px;
+}
+
+/* Unicode character for "minus" sign (-) */
+p.accordion.active:after {
+    content: "\2796"; 
+}
+
+/* Style the element that is used for the panel class */
+
+div.panel {
+    padding: 0 18px;
+    background-color: lightblue;
+    max-height: 0;
+    width: 97%;
+    overflow: hidden;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+    margin-bottom:10px;
+}
+
+div.panel.show {
+    opacity: 1;
+    max-height: 500px; /* Whatever you like, as long as its more than the height of the content (on all screen sizes) */
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(event) { 
+
+
+var acc = document.getElementsByClassName("accordion");
+var panel = document.getElementsByClassName('panel');
+
+for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function() {
+        var setClasses = !this.classList.contains('active');
+        setClass(acc, 'active', 'remove');
+        setClass(panel, 'show', 'remove');
+
+        if (setClasses) {
+            this.classList.toggle("active");
+            this.nextElementSibling.classList.toggle("show");
+        }
+    }
+}
+
+function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+        els[i].classList[fnName](className);
+    }
+}
+
+});
+</script>
+
+
+
+<br>
+<h3><center>DIY Products</center></h3>
+<br>
+
+
+
+<center><iframe width="670" height="377" src="https://www.youtube.com/embed/yWDaN1BUSXs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+<br>
+
+<center><strong> Try it yourself! These videos give a quick walkthrough on how to make a pad in case of an emergency with easy to find materials. </strong></center>
+<br>
+<br>
+
+<center><iframe width="670" height="377" src="https://www.youtube.com/embed/OjZ93pDKmWs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+<br>
+<br>
+<h3><center>Additional Resources</center></h3>
+<br>
+<p> <center>If you're looking for advice on how to help your kids during the <strong>Covid-19</strong> pandemic, click <a href = "https://www.bannerhealth.com/healthcareblog/advise-me/covid-19-how-to-help-your-child-navigate-this-new-normal">here</a>.
+</center></p>
+<br>
+
+<p> <center>There are apps to track menstruation that are convenient to download, just click here on <a href = "https://apps.apple.com/us/app/clue-period-cycle-tracker/id657189652">Apple Store</a> or <a href = "https://play.google.com/store/apps/details?id=com.period.tracker.lite&hl=en_US">Google Play Store</a> to check them out.
+</center></p>
+<br>
+
+<p> <center>Looking for easy ways to save yourself some money on feminine hygiene products? Try these online coupon providers by clicking  <a href = "https://thekrazycouponlady.com/coupons/feminine-hygiene">here</a>.
+</center></p>
+<br>
+
+<p> <center> Periods are not easy and can be very painful. Here are some useful tips and information to ease period pains by clicking  <a href = "https://www.healthpartners.com/blog/13-ways-to-stop-period-pain/">here</a>.
+</center></p>
+<br>
+
+<p> <center>Find out how to talk to your daughter about periods by clicking  <a href = "https://www.bodyform.co.uk/our-world/daughters-first-period/">here</a>.
+</center></p>
+<br>
+<br>
+
+
+
+
+
+
+
+
+</body>
+</html>
